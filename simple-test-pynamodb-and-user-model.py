@@ -9,7 +9,7 @@ from models.APIKey import APIKey
 print("Adding user...")
 user = User.createFromDict({'email': 'test@test.com', 'name': 'tester1', 'password': 'test'})
 user.save()
-print(user)
+# Sensitive information removed from print statement
 
 print("Adding user2...")
 user2 = User.createFromDict({'email': 'test2@test.com', 'name': 'tester2', 'password': 'test'})

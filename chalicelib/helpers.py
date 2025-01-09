@@ -17,7 +17,7 @@ from chalice import Chalice
 cached_chalice_app = None
 def get_chalice_app():
     global cached_chalice_app
-    if cached_chalice_app == None:
+    if cached_chalice_app is None:
         # Our chalice app definition
         cached_chalice_app = Chalice(app_name='chalice-pynamodb-starter-kit')
     return cached_chalice_app
@@ -49,7 +49,7 @@ def getTTLExpiration(hours = 24):
 # Simple email syntax validation
 def validateEmail(email):
     regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-    if(re.fullmatch(regex, email)):
+    if re.fullmatch(regex, email):
         return True
     return False
 
